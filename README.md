@@ -430,6 +430,12 @@ This repository focuses on recent advances in making **video diffusion models** 
 
 ## Real-Time & Streaming Talking Head Generation
 
+- **Real-Time Generation of Streamable Talking Portrait Video with Reference-Guided Deep Compression VAEs** · *arXiv 2026.06* ·   [Paper]([https://arxiv.org/pdf/2605.02948](https://arxiv.org/pdf/2606.01620))  
+![Streaming](https://img.shields.io/badge/-Streaming-0ea5e9?style=flat-square)
+  ![Real-time](https://img.shields.io/badge/-Real--time-16a34a?style=flat-square)
+  ![Talking Head](https://img.shields.io/badge/-Talking%20Head-64748b?style=flat-square)  
+  40+ FPS on a H100 and 23 on a 4090. This work introduces a VAE which is conditioned on a reference image and is therefore able to keep good quality with a higher compression ratio, on which they train a DiT. 
+
 - **AsymTalker: Identity-Consistent Long-Term Talking Head Generation via Asymmetric Distillation** · *arXiv 2026.05* ·
  [Paper](https://arxiv.org/pdf/2605.02948)  
 ![Streaming](https://img.shields.io/badge/-Streaming-0ea5e9?style=flat-square)
