@@ -228,12 +228,29 @@ This repository focuses on recent advances in making **video diffusion models** 
 
 ## Causal Video Generation & Streaming Architecture
 
+- **StreamDiffusionV2: SLO-aware Live Video Diffusion Serving with Rolling KV Cache** · *MLSys 2026 / arXiv 2025.11* · [Paper](https://arxiv.org/abs/2511.07399)  
+  ![Streaming](https://img.shields.io/badge/-Streaming-0ea5e9?style=flat-square)
+  ![Real-time](https://img.shields.io/badge/-Real--time-16a34a?style=flat-square)
+  ![Video Generation](https://img.shields.io/badge/-Video%20Generation-64748b?style=flat-square)  
+  System-level streaming video diffusion serving stack with SLO-aware batching, block scheduling, rolling KV cache, motion-aware noise control, and multi-GPU pipeline orchestration for live generation.
+
 - **Causal-rCM: A Unified Teacher-Forcing and Self-Forcing Open Recipe for Autoregressive Diffusion Distillation in Streaming Video Generation and Interactive World Models** · *arXiv 2026.06* · [Paper](https://arxiv.org/abs/2606.25473)  
   ![Causal](https://img.shields.io/badge/-Causal-1f6feb?style=flat-square)
   ![Streaming](https://img.shields.io/badge/-Streaming-0ea5e9?style=flat-square)
   ![Real-time](https://img.shields.io/badge/-Real--time-16a34a?style=flat-square)
   ![Interactive](https://img.shields.io/badge/-Interactive-f59e0b?style=flat-square)  
   Extends rectified consistency models to autoregressive video diffusion, combining teacher-forcing consistency-model initialization with self-forcing distribution matching for few-step streaming video generation and interactive world models.
+
+- **SANA-Streaming: Real-Time Streaming Video Editing with Hybrid Diffusion Transformers** · *arXiv 2026.05* · [Paper](https://arxiv.org/abs/2605.30409)  
+  ![Streaming](https://img.shields.io/badge/-Streaming-0ea5e9?style=flat-square)
+  ![Real-time](https://img.shields.io/badge/-Real--time-16a34a?style=flat-square)
+  ![Video Generation](https://img.shields.io/badge/-Video%20Generation-64748b?style=flat-square)  
+  Real-time high-resolution video-to-video diffusion backbone using hybrid DiT blocks, Gated DeltaNet memory, local alignment attention, cycle-reverse regularization, and deployment-oriented kernel/quantization co-design.
+
+- **CoReDiT: Contextual Reconstruction for Efficient Diffusion Transformers** · *arXiv 2026.05* · [Paper](https://arxiv.org/abs/2605.14191)  
+  ![Real-time](https://img.shields.io/badge/-Real--time-16a34a?style=flat-square)
+  ![Video Generation](https://img.shields.io/badge/-Video%20Generation-64748b?style=flat-square)  
+  Spatial-coherence-guided token pruning and contextual reconstruction method for reducing DiT attention cost in image/video generation, useful for high-resolution avatar backbones.
 
 - **Causal Forcing++: Scalable Few-Step Autoregressive Diffusion Distillation for Real-Time Interactive Video Generation** · *arXiv 2026.05* · [Paper](https://arxiv.org/abs/2605.15141) · [Code](https://github.com/thu-ml/Causal-Forcing)  
   ![Causal](https://img.shields.io/badge/-Causal-1f6feb?style=flat-square)
@@ -503,6 +520,14 @@ This repository focuses on recent advances in making **video diffusion models** 
 
 ## Audio-Visual Video Generation & Synchronization
 
+- **MaineCoon: Pursuing A Real-Time Audio-Visual Social World Model** · *arXiv 2026.06* · [Paper](https://arxiv.org/abs/2606.17800) · [Code](https://github.com/catnip-ai-tech/MaineCoon)  
+  ![Audio-Visual](https://img.shields.io/badge/-Audio--Visual-0891b2?style=flat-square)
+  ![Streaming](https://img.shields.io/badge/-Streaming-0ea5e9?style=flat-square)
+  ![Real-time](https://img.shields.io/badge/-Real--time-16a34a?style=flat-square)
+  ![Interactive](https://img.shields.io/badge/-Interactive-f59e0b?style=flat-square)  
+  ![GitHub Repo stars](https://img.shields.io/github/stars/catnip-ai-tech/MaineCoon?style=flat-square)  
+  22B real-time audio-visual autoregressive model for social-interactive generation, reporting up to 47.5 FPS on a single H100 with sub-second interaction and agentic streaming inference.
+
 - **Inference-Time Scaling for Joint Audio-Video Generation** · *arXiv 2026.06* · [Paper](https://arxiv.org/abs/2606.03183) · [Project](https://jung-jaemin.github.io/ITS-AVGen-Proj)  
   ![Audio-Visual](https://img.shields.io/badge/-Audio--Visual-0891b2?style=flat-square)
   ![Synchronization](https://img.shields.io/badge/-Synchronization-14b8a6?style=flat-square)
@@ -562,6 +587,20 @@ This repository focuses on recent advances in making **video diffusion models** 
 ---
 
 ## Real-Time & Streaming Talking Head Generation
+
+- **Lip Forcing: Few-Step Autoregressive Diffusion for Real-time Lip Synchronization** · *arXiv 2026.06* · [Paper](https://arxiv.org/abs/2606.11180) · [Project](https://cvlab-kaist.github.io/LipForcing/)  
+  ![Causal](https://img.shields.io/badge/-Causal-1f6feb?style=flat-square)
+  ![Streaming](https://img.shields.io/badge/-Streaming-0ea5e9?style=flat-square)
+  ![Real-time](https://img.shields.io/badge/-Real--time-16a34a?style=flat-square)
+  ![Synchronization](https://img.shields.io/badge/-Synchronization-14b8a6?style=flat-square)
+  ![Talking Head](https://img.shields.io/badge/-Talking%20Head-64748b?style=flat-square)  
+  Two-step autoregressive diffusion for video-to-video lip synchronization, distilling a 14B bidirectional teacher into causal students and reporting 31 FPS for the 1.3B model on a single H100.
+
+- **LongCat-Video-Avatar 1.5** · *arXiv 2026.05* · [Paper](https://arxiv.org/abs/2605.26486)  
+  ![Streaming](https://img.shields.io/badge/-Streaming-0ea5e9?style=flat-square)
+  ![Real-time](https://img.shields.io/badge/-Real--time-16a34a?style=flat-square)
+  ![Talking Head](https://img.shields.io/badge/-Talking%20Head-64748b?style=flat-square)  
+  Production-oriented audio-driven avatar stack built on LongCat-Video, combining Whisper audio conditioning, GRPO alignment, DMD step distillation, reference skip attention, cross-chunk latent stitching, and INT8/LoRA deployment options.
 
 - **Real-Time Generation of Streamable Talking Portrait Video with Reference-Guided Deep Compression VAEs** · *arXiv 2026.06* · [Paper](https://arxiv.org/abs/2606.01620)  
   ![Causal](https://img.shields.io/badge/-Causal-1f6feb?style=flat-square)
@@ -673,6 +712,29 @@ This repository focuses on recent advances in making **video diffusion models** 
   ![Real-time](https://img.shields.io/badge/-Real--time-16a34a?style=flat-square)
   ![Audio-Visual](https://img.shields.io/badge/-Audio--Visual-0891b2?style=flat-square)  
   Native-streaming interactive foundation model that represents language, audio, and video as interleaved input/output tokens in a single block-causal Transformer, targeting sub-second full-duplex audio-visual interaction.
+
+- **InteractiveAvatar: Real-Time Streaming Video Generation for Consistent and Intent-Aware Avatars** · *arXiv 2026.06* · [Paper](https://arxiv.org/abs/2606.22905)  
+  ![Causal](https://img.shields.io/badge/-Causal-1f6feb?style=flat-square)
+  ![Interactive](https://img.shields.io/badge/-Interactive-f59e0b?style=flat-square)
+  ![Streaming](https://img.shields.io/badge/-Streaming-0ea5e9?style=flat-square)
+  ![Real-time](https://img.shields.io/badge/-Real--time-16a34a?style=flat-square)
+  ![Talking Head](https://img.shields.io/badge/-Talking%20Head-64748b?style=flat-square)  
+  Real-time infinite-streaming avatar video framework with autoregressive distillation, Long-Short Visual Memory, and a Reasoning-Reaction Module for visually consistent, intent-aware responses.
+
+- **TokTalk: Streaming Audio-LLM Tokens to 3D Facial Motion for Real-Time Conversational Avatars** · *arXiv 2026.05* · [Paper](https://arxiv.org/abs/2605.31294)  
+  ![Interactive](https://img.shields.io/badge/-Interactive-f59e0b?style=flat-square)
+  ![Streaming](https://img.shields.io/badge/-Streaming-0ea5e9?style=flat-square)
+  ![Real-time](https://img.shields.io/badge/-Real--time-16a34a?style=flat-square)
+  ![Talking Head](https://img.shields.io/badge/-Talking%20Head-64748b?style=flat-square)  
+  Lightweight motion-first avatar module that maps streaming Audio-LLM tokens directly to 3D facial motion with chunk-based Conditional Flow Matching, allowing animation to run in parallel with speech generation.
+
+- **UMo: Unified Sparse Autoregressive Motion Modeling for Real-Time Co-Speech Avatars** · *arXiv 2026.05* · [Paper](https://arxiv.org/abs/2605.14731)  
+  ![Causal](https://img.shields.io/badge/-Causal-1f6feb?style=flat-square)
+  ![Interactive](https://img.shields.io/badge/-Interactive-f59e0b?style=flat-square)
+  ![Streaming](https://img.shields.io/badge/-Streaming-0ea5e9?style=flat-square)
+  ![Real-time](https://img.shields.io/badge/-Real--time-16a34a?style=flat-square)
+  ![Talking Head](https://img.shields.io/badge/-Talking%20Head-64748b?style=flat-square)  
+  Sparse autoregressive motion model over text, audio, and motion tokens for low-latency co-speech facial expression and gesture generation.
 
 - **StreamAvatar: Streaming Diffusion Models for Real-Time Interactive Human Avatars** · *CVPR 2026 / arXiv 2025.12* · [Paper](https://arxiv.org/abs/2512.22065) · [Project](https://streamavatar.github.io/)  
   ![Causal](https://img.shields.io/badge/-Causal-1f6feb?style=flat-square)
