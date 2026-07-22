@@ -234,6 +234,12 @@ This repository focuses on recent advances in making **video diffusion models** 
   ![Video Generation](https://img.shields.io/badge/-Video%20Generation-64748b?style=flat-square)  
   System-level streaming video diffusion serving stack with SLO-aware batching, block scheduling, rolling KV cache, motion-aware noise control, and multi-GPU pipeline orchestration for live generation.
 
+- **Towards Memory-Efficient Autoregressive Video Generation via Instance-Specific Parametric Absorption** · *arXiv 2026.07* · [Paper](https://arxiv.org/abs/2607.00712)  
+  ![Causal](https://img.shields.io/badge/-Causal-1f6feb?style=flat-square)
+  ![Streaming](https://img.shields.io/badge/-Streaming-0ea5e9?style=flat-square)
+  ![Real-time](https://img.shields.io/badge/-Real--time-16a34a?style=flat-square)  
+  Introduces ISPA, which converts selected full-attention layers to local attention and absorbs historical context into model weights via closed-form least-squares modulation, cutting the KV cache by up to 50% with near-lossless quality in streaming autoregressive video generation.
+
 - **Causal-rCM: A Unified Teacher-Forcing and Self-Forcing Open Recipe for Autoregressive Diffusion Distillation in Streaming Video Generation and Interactive World Models** · *arXiv 2026.06* · [Paper](https://arxiv.org/abs/2606.25473)  
   ![Causal](https://img.shields.io/badge/-Causal-1f6feb?style=flat-square)
   ![Streaming](https://img.shields.io/badge/-Streaming-0ea5e9?style=flat-square)
@@ -704,6 +710,14 @@ This repository focuses on recent advances in making **video diffusion models** 
 ---
 
 ## Interactive & Full-Duplex Conversational Avatars
+
+- **FacePlex: Full-Duplex Joint Speech-Facial Motion Generation for Conversational Avatars** · *arXiv 2026.06* · [Paper](https://arxiv.org/abs/2606.30145)  
+  ![Full-duplex](https://img.shields.io/badge/-Full--duplex-dc2626?style=flat-square)
+  ![Interactive](https://img.shields.io/badge/-Interactive-f59e0b?style=flat-square)
+  ![Streaming](https://img.shields.io/badge/-Streaming-0ea5e9?style=flat-square)
+  ![Real-time](https://img.shields.io/badge/-Real--time-16a34a?style=flat-square)
+  ![Talking Head](https://img.shields.io/badge/-Talking%20Head-64748b?style=flat-square)  
+  Full-duplex framework that jointly generates speech and facial motion tokens at each streaming step via Rolling Flow Matching and Rolling Cross-Attention for bidirectional speech–motion conditioning in real-time conversation.
 
 - **Wan-Streamer v0.1: End-to-end Real-time Interactive Foundation Models** · *arXiv 2026.06* · [Paper](https://arxiv.org/abs/2606.25041)  
   ![Full-duplex](https://img.shields.io/badge/-Full--duplex-dc2626?style=flat-square)
